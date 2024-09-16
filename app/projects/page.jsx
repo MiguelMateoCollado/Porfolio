@@ -13,12 +13,22 @@ const page = () => {
       link: "./imgs/condovisitas.jpg",
       url: "https://condovisita.com/",
     },
+    {
+      id: 3,
+      link: "./imgs/loan.jpg",
+      url: "https://condovisita.com/",
+    },
+    {
+      id: 4,
+      link: "./imgs/aleja.jpg",
+      url: "https://condovisita.com/",
+    },
   ];
   return (
     <section className="container leading-relaxed text-white mx-auto grid gap-4 grid-cols-2 max-md:py-20 min-h-screen content-center">
       <div className=" flex flex-col max-md:col-span-2 col-span-1 gap-4">
         <h1 className="text-6xl max-md:text-4xl">
-          My Projects<span className="text-red-500">.</span>
+          Mis Proyectos<span className="text-red-500">.</span>
         </h1>
         <p className="text-base w-2/3 max-md:text-sm max-md:font-light max-md:w-full text-[#d6d6d6] tracking-wide leading-relaxed text-wrap">
           A lo largo del tiempo, e desarrollado diversos proyectos tanto por
@@ -29,14 +39,14 @@ const page = () => {
           mis logros.
         </p>
       </div>
-      <div className="h-[25vh] max-md:h-[50vh] max-md:py-5 grid grid-cols-2 max-md:col-span-2 col-span-1 items-stretch  justify-center gap-4">
+      <div className=" max-md:h-[50vh] max-md:py-5 grid grid-cols-2 max-md:col-span-2 col-span-1 items-stretch  justify-center gap-4">
         {projects.map(({ link, url, id }, index) => {
           return (
             <Link
               key={index}
               href={`/project/${id}`}
               style={{ backgroundImage: `url(${link})` }}
-              className={`col-span-1 max-md:col-span-2 group/project cursor-pointer bg-cover bg-center inner-shadow rounded-lg hover:scale-105 transition-all duration-300 hover:rotate-1 bg-red-500`}
+              className={`col-span-1 max-md:col-span-2 group/project h-[25vh] cursor-pointer bg-cover bg-center inner-shadow rounded-lg hover:scale-105 transition-all duration-300 hover:rotate-1 bg-red-500`}
             >
               <div className="bg-none text-center items-center justify-center group-hover/project:bg-gray-800/50  text-xl transition-all duration-300 rounded-lg flex h-full ">
                 <span className="flex relative items-center gap-2 group-hover/project:bg-white p-2 pl-0  group-hover/project:text-red-500  tracking-wider ">

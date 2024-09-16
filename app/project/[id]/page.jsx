@@ -37,6 +37,32 @@ honed my Laravel database design skills.`,
 
       skills: ["devicon:react", "logos:laravel", "devicon:tailwindcss"],
     },
+    {
+      id: 3,
+      link: "/imgs/loan.jpg",
+      url: "https://condovisita.com/",
+      title: "Loan System",
+      time: "Present",
+      tabname: "Freelance Project",
+      description: `I gained extensive UI design experience while completing a visitor management project. I implemented the design using CSS and
+TailwindCSS and participated in backend/frontend development using React JS and Laravel. I also developed form constraints and
+honed my Laravel database design skills.`,
+
+      skills: ["devicon:nextjs", "logos:jotai","devicon:tauri", "devicon:tailwindcss","devicon:mongodb","vscode-icons:file-type-prisma"],
+    },
+    {
+      id: 4,
+      link: "/imgs/aleja.jpg",
+      url: "https://condovisita.com/",
+      title: "Aleja Accesorios",
+      time: "Present",
+      tabname: "Prixet Technology",
+      description: `I gained extensive UI design experience while completing a visitor management project. I implemented the design using CSS and
+TailwindCSS and participated in backend/frontend development using React JS and Laravel. I also developed form constraints and
+honed my Laravel database design skills.`,
+
+      skills: ["mdi:wordpress","vscode-icons:file-type-css","vscode-icons:file-type-html","skill-icons:mysql-light"],
+    },
   ];
   const [project] = useState(
     projects.find((project) => project.id == params.id)

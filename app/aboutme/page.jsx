@@ -3,7 +3,7 @@ import Subrender from "../components/Subrender";
 
 export default function Home({ children }) {
   let features = [
-    { position: "YEARS OF EXPERIENCE", stats: "1+" },
+    { position: "AÑOS DE EXPERIENCIA", stats: "2+" },
     { position: "FINISHED PROJECTS", stats: "3+" },
   ];
 
