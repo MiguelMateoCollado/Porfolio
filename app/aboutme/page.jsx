@@ -4,14 +4,14 @@ import Subrender from "../components/Subrender";
 export default function Home({ children }) {
   let features = [
     { position: "AÑOS DE EXPERIENCIA", stats: "2+" },
-    { position: "FINISHED PROJECTS", stats: "3+" },
+    { position: "PROYECTS COMPLETADOS", stats: "3+" },
   ];
 
   return (
     <section className="container leading-relaxed max-md:py-20 text-white mx-auto grid grid-cols-2 place-content-center min-h-screen content-center">
       <div className="col-span-1 max-md:col-span-2  flex flex-col p-10 max-md:p-0 gap-5">
         <h1 className="text-7xl max-md:text-5xl leading-tight">
-          <span className="text-[#FF0000]">Crear</span> conlleva esfuerzo y
+          <span className="text-[crimson]">Crear</span> conlleva esfuerzo y
           dedicación.
         </h1>
         <p className="font-light text-[#d6d6d6] max-md:text-sm">

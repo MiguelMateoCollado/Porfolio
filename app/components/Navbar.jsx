@@ -10,10 +10,10 @@ const Navbar = () => {
       </div>
       <ul className=" flex col-span-1 items-center gap-x-2 justify-end">
         <li>
-          <Icon icon="mingcute:linkedin-fill" className={`${iconClassname}`} />
+          <Icon icon="teenyicons:linkedin-solid" className={`${iconClassname}`} />
         </li>
         <li>
-          <Icon icon="mingcute:github-fill" className={`${iconClassname}`} />
+          <Icon icon="teenyicons:github-solid" className={`${iconClassname}`} />
         </li>
         <li></li>
       </ul>

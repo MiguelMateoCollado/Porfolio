@@ -15,7 +15,7 @@ const ExperienceTab = ({
     <div className="">
       <h1
         onClick={() => setOpen(!open)}
-        className="text-lg max-md:text-[0.9rem] flex-wrap font-light tracking-wide flex items-center gap-1  w-fit hover:text-red-400 transition-all duration-150 cursor-pointer text-[#FF0000]"
+        className="text-lg max-md:text-[0.9rem] flex-wrap font-light tracking-wide flex items-center gap-1  w-fit hover:text-red-400 transition-all duration-150 cursor-pointer text-[crimson]"
       >
         {tabname} - {time}{" "}
         {open === true ? (
