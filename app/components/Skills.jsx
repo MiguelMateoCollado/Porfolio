@@ -96,14 +96,14 @@ const Skills = () => {
         <h1 className="max-md:text-[1.7rem] text-green-400">Database - </h1>
         <div className="flex gap-4">
           {DatabaseIcons.map(({ value, name, color }, index) => (
-            <div className="group relative">
+            <div key={index} className="group relative">
               <p
                 style={{ backgroundColor: `${color}` }}
                 className={`absolute hidden p-2 z-10 text-white  group-hover:block rounded-md top-6 `}
               >
                 {name}
               </p>
-              <Icon key={index} icon={value} className="text-white text-2xl" />
+              <Icon  icon={value} className="text-white text-2xl" />
             </div>
           ))}
         </div>
