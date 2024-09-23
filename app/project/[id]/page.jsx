@@ -11,11 +11,23 @@ const page = ({ params }) => {
       id: 1,
       link: "/imgs/videogames.jpg",
       url: "https://videogames.mmateo.com/",
-      title: "Videogame Cataloge",
-      description: `This project was created to implement the knowledge acquired during my course. With a two-week deadline, I used React, Express, CSS, and the rawg.io API to build a video game catalog where users could register, search, filter, and access additional information about each game. 
+      position: "Full Stack Developer",
+      title: "Catalogo de videojuegos - Proyecto Final",
+      time: "2023",
+      description: `Responsabilidades:
+      🌟 Crear un catalogo de videojuegos con el uso de React, Express, CSS, y la API rawg.io para mostrar información de videojuegos.
+      🌟 Crear un CRUD para registrar, buscar, filtrar y mostrar información de videojuegos.
+      🌟 Crear una funcionalidad para mostrar más información sobre los videojuegos.
+      🌟 Desarrollar todo el front-end del proyecto.
 
-The project served as my final test during Henry's Bootcamp and marked my first major project. It taught me the value of practicing programming and helped me become comfortable with it. Since then, I've updated the project using new technologies I've acquired throughout my career and discovered the freedom to create anything once I have the right skills and practice.`,
-      tabname: "Personal Project",
+      Descripción:
+
+      Este proyecto nació con el propósito de plasmar todo lo que aprendí durante mi curso. Con solo dos semanas de plazo, me sumergí en el desarrollo de un catálogo de videojuegos utilizando React, Express, CSS y la API de rawg.io. En él, los usuarios pueden registrarse, buscar, filtrar y descubrir información detallada sobre cada juego. Fue mi proyecto final en el Bootcamp de Henry, y más que un simple examen, significó mi primer gran desafío como programador.
+
+A través de este proceso, aprendí lo valiosa que es la práctica constante y cómo, poco a poco, empecé a sentirme más seguro en este camino que había elegido. Este proyecto me marcó, no solo porque fue el primero, sino porque me demostró que, con esfuerzo y dedicación, podía lograr cualquier cosa.
+
+Con el paso del tiempo, seguí mejorándolo, aplicando las nuevas tecnologías que he ido aprendiendo a lo largo de mi carrera. Descubrí que, cuando tienes las habilidades y la pasión por lo que haces, el único límite para crear es tu propia imaginación.`,
+      tabname: "Proyecto Final Henry Bootcamp",
       skills: [
         "devicon:react",
         "logos:nodejs-icon",
@@ -29,7 +41,7 @@ The project served as my final test during Henry's Bootcamp and marked my first 
       link: "/imgs/condovisitas.jpg",
       url: "https://condovisita.com/",
       title: "Condovisitas",
-      time: "2023",
+      time: "2022",
       tabname: "Prixet Tecnology",
       description: `I gained extensive UI design experience while completing a visitor management project. I implemented the design using CSS and
 TailwindCSS and participated in backend/frontend development using React JS and Laravel. I also developed form constraints and
@@ -44,11 +56,20 @@ honed my Laravel database design skills.`,
       title: "Loan System",
       time: "Present",
       tabname: "Freelance Project",
-      description: `I gained extensive UI design experience while completing a visitor management project. I implemented the design using CSS and
+      description: `
+      
+      I gained extensive UI design experience while completing a visitor management project. I implemented the design using CSS and
 TailwindCSS and participated in backend/frontend development using React JS and Laravel. I also developed form constraints and
 honed my Laravel database design skills.`,
 
-      skills: ["devicon:nextjs", "logos:jotai","devicon:tauri", "devicon:tailwindcss","devicon:mongodb","vscode-icons:file-type-prisma"],
+      skills: [
+        "devicon:nextjs",
+        "logos:jotai",
+        "devicon:tauri",
+        "devicon:tailwindcss",
+        "devicon:mongodb",
+        "vscode-icons:file-type-prisma",
+      ],
     },
     {
       id: 4,
@@ -61,7 +82,12 @@ honed my Laravel database design skills.`,
 TailwindCSS and participated in backend/frontend development using React JS and Laravel. I also developed form constraints and
 honed my Laravel database design skills.`,
 
-      skills: ["mdi:wordpress","vscode-icons:file-type-css","vscode-icons:file-type-html","skill-icons:mysql-light"],
+      skills: [
+        "mdi:wordpress",
+        "vscode-icons:file-type-css",
+        "vscode-icons:file-type-html",
+        "skill-icons:mysql-light",
+      ],
     },
   ];
   const [project] = useState(
@@ -69,7 +95,7 @@ honed my Laravel database design skills.`,
   );
   return (
     <div className="container leading-relaxed gap-4 text-white mx-auto grid grid-cols-2 max-md:py-20 min-h-screen content-center">
-      <div className="col-span-1 max-md:col-span-2 relative rounded-xl">
+      <div className="col-span-1 max-md:col-span-2 content-center relative rounded-xl">
         <Image
           src={project.link}
           width={500}
@@ -78,7 +104,14 @@ honed my Laravel database design skills.`,
         />
       </div>
       <div className="col-span-1 p-4 gap-3 max-md:col-span-2 flex flex-col gap-y-7">
-        <h1 className="text-4xl font-light text-red-500">{project.title}</h1>
+        <span>
+          <h1 className="text-3xl font-light text-[crimson]">
+            {project.title}
+          </h1>
+          <h1 className="text-xl font-light text-gray-500">
+            {project.position}
+          </h1>
+        </span>
         <ExperienceTab
           description={project.description}
           tabname={project.tabname}

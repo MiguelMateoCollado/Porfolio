@@ -62,18 +62,14 @@ const Skills = () => {
         <h1 className="max-md:text-[1.7rem] text-blue-400">Web Developer - </h1>
         <div className="flex gap-4">
           {iconCollect.map(({ value, name, color }, index) => (
-            <div className="group relative">
+            <div key={index} className="group relative">
               <p
                 style={{ backgroundColor: `${color}` }}
                 className={`absolute hidden z-10 bg-[${color}] p-2 text-sm text-white rounded-md  group-hover:block top-7 `}
               >
                 {name}
               </p>
-              <Icon
-                key={index}
-                icon={value}
-                className={`text-white text-2xl`}
-              />
+              <Icon icon={value} className={`text-white text-2xl`} />
             </div>
           ))}
         </div>

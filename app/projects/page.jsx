@@ -7,21 +7,25 @@ const page = () => {
       id: 1,
       link: "./imgs/videogames.jpg",
       url: "https://videogames.mmateo.com/",
+      state: "complete",
     },
     {
       id: 2,
       link: "./imgs/condovisitas.jpg",
       url: "https://condovisita.com/",
+      state: "complete",
     },
     {
       id: 3,
       link: "./imgs/loan.jpg",
       url: "https://condovisita.com/",
+      state: "building",
     },
     {
       id: 4,
       link: "./imgs/aleja.jpg",
       url: "https://condovisita.com/",
+      state: "complete",
     },
   ];
   return (
@@ -40,7 +44,7 @@ const page = () => {
         </p>
       </div>
       <div className=" max-md:h-[50vh] max-md:py-5 grid grid-cols-2 max-md:col-span-2 col-span-1 items-stretch  justify-center gap-4">
-        {projects.map(({ link, url, id }, index) => {
+        {projects.map(({ link, url, id, state }, index) => {
           return (
             <Link
               key={index}
@@ -48,18 +52,33 @@ const page = () => {
               style={{ backgroundImage: `url(${link})` }}
               className={`col-span-1 max-md:col-span-2 group/project h-[25vh] cursor-pointer bg-cover bg-center inner-shadow rounded-lg hover:scale-105 transition-all duration-300 hover:rotate-1 bg-red-500`}
             >
-              <div className="bg-none text-center items-center justify-center group-hover/project:bg-gray-800/50  text-xl transition-all duration-300 rounded-lg flex h-full ">
-                <span className="flex relative items-center gap-2 group-hover/project:bg-white p-2 pl-0  group-hover/project:text-red-500  tracking-wider ">
-                  <span className="flex pl-2 items-center text-white/0 group-hover/project:text-red-500">
-                    Live Project{" "}
-                    <Icon icon="material-symbols:arrow-forward-rounded" />
+              {state === "complete" ? (
+                <div className="bg-none text-center items-center justify-center group-hover/project:bg-gray-800/50  text-xl transition-all duration-300 rounded-lg flex h-full ">
+                  <span className="flex relative items-center gap-2 group-hover/project:bg-white p-2 pl-0  group-hover/project:text-red-500  tracking-wider ">
+                    <span className="flex pl-2 items-center text-white/0 group-hover/project:text-red-500">
+                      Live Project{" "}
+                      <Icon icon="material-symbols:arrow-forward-rounded" />
+                    </span>
+                    <div className="absolute group-hover/project:w-full group-hover/project:bg-red-600 transition-all duration-300  w-0 h-1 top-0 ease-in-out  bg-white"></div>
+                    <div className="absolute group-hover/project:h-full group-hover/project:bg-red-600 transition-all duration-300 ease-in-out w-1 h-0 rigth-0  bg-white"></div>
+                    <div className="absolute group-hover/project:h-full group-hover/project:bg-red-600 transition-all duration-300 ease-in-out w-1 h-0 -right-0  bg-white"></div>
+                    <div className="absolute group-hover/project:w-full group-hover/project:bg-red-600 transition-all duration-300 ease-in-out  w-0 h-1 bottom-0  bg-white"></div>
                   </span>
-                  <div className="absolute group-hover/project:w-full group-hover/project:bg-red-600 transition-all duration-300  w-0 h-1 top-0 ease-in-out  bg-white"></div>
-                  <div className="absolute group-hover/project:h-full group-hover/project:bg-red-600 transition-all duration-300 ease-in-out w-1 h-0 rigth-0  bg-white"></div>
-                  <div className="absolute group-hover/project:h-full group-hover/project:bg-red-600 transition-all duration-300 ease-in-out w-1 h-0 -right-0  bg-white"></div>
-                  <div className="absolute group-hover/project:w-full group-hover/project:bg-red-600 transition-all duration-300 ease-in-out  w-0 h-1 bottom-0  bg-white"></div>
-                </span>
-              </div>
+                </div>
+              ) : (
+                <div className="bg-none text-center items-center justify-center group-hover/project:bg-gray-800/50  text-xl transition-all duration-300 rounded-lg flex h-full ">
+                  <span className="flex relative items-center gap-2 group-hover/project:bg-white p-2 pl-0  group-hover/project:text-gray-500  tracking-wider ">
+                    <span className="flex pl-2 items-center text-white/0 group-hover/project:text-gray-500">
+                      {state}
+                      <Icon icon="material-symbols:arrow-forward-rounded" />
+                    </span>
+                    <div className="absolute group-hover/project:w-full group-hover/project:bg-gray-600 transition-all duration-300  w-0 h-1 top-0 ease-in-out  bg-white"></div>
+                    <div className="absolute group-hover/project:h-full group-hover/project:bg-gray-600 transition-all duration-300 ease-in-out w-1 h-0 rigth-0  bg-white"></div>
+                    <div className="absolute group-hover/project:h-full group-hover/project:bg-gray-600 transition-all duration-300 ease-in-out w-1 h-0 -right-0  bg-white"></div>
+                    <div className="absolute group-hover/project:w-full group-hover/project:bg-gray-600 transition-all duration-300 ease-in-out  w-0 h-1 bottom-0  bg-white"></div>
+                  </span>
+                </div>
+              )}
             </Link>
           );
         })}

@@ -17,10 +17,9 @@ const ExperienceTab = ({
         onClick={() => setOpen(!open)}
         className="text-lg max-md:text-[0.9rem] flex-wrap font-light tracking-wide flex items-center gap-1  w-fit hover:text-red-400 transition-all duration-150 cursor-pointer text-[crimson]"
       >
-        {tabname} - {time}{" "}
+        {tabname} - {time}
         {open === true ? (
           <span>
-            {" "}
             <Icon icon="teenyicons:down-small-outline" />
           </span>
         ) : (
@@ -28,7 +27,7 @@ const ExperienceTab = ({
         )}
       </h1>
       <p
-        className={` flex flex-col gap-2  tracking-wide truncate text-balance transition-all duration-500 ease-in-out leading-relaxed  ${
+        className={` flex flex-col gap-2 whitespace-pre-line tracking-wide truncate text-balance transition-all duration-500 ease-in-out leading-relaxed  ${
           open === false
             ? `${defaultSize} text-white/50`
             : "h-fit mb-10 text-white"
