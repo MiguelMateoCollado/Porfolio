@@ -17,7 +17,7 @@ export default function Home() {
       </div>
       <div className="col-span-1 max-md:text-center content-center max-md:col-span-2 gap-4 flex flex-col justify-center">
         <h1 className="text-7xl max-md:text-4xl max-md:py-3 md:text-4xl antialiased font-bold tracking-tight text-[#FBFAF8]">
-          Hi. My name is <span className="text-[crimson]">Miguel Mateo</span> I'm a
+          Hi. My name is <span className="text-[crimson]">Miguel Mateo</span> I am a
         </h1>
         <AnimateText />
         <p className="text-md text-[#d6d6d6] md:leading-relaxed md:text-xl max-md:mb-14 tracking-wide p-3 max-md:p-0 antialiased  max-md:leading-relaxed font-light">
