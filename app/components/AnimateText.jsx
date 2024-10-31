@@ -31,7 +31,7 @@ const AnimateText = () => {
           delay: 2,
           opacity: 0,
           yPercent: 100,
-          stagger: 0.1,
+          stagger: 0.075,
         }
       ).to(
         [
@@ -57,7 +57,7 @@ const AnimateText = () => {
         {
           opacity: 1,
           color: "crimson",
-          stagger: 0.1,
+          stagger: 0.075,
         }
       );
     }, comp);
@@ -65,25 +65,34 @@ const AnimateText = () => {
     return () => ctx.revert();
   });
   return (
-    <h2 className="text-6xl md:text-[3.5rem] max-md:text-4xl max-md:text-center antialiased text-[#FBFAF8] font-extrabold" ref={comp}>
+    <h2
+      className=" md:text-3xl max-md:text-3xl max-md:text-center antialiased text-[#FBFAF8] font-extrabold"
+      ref={comp}
+    >
       {" "}
       <span id="word">
-        <span id="char1">F</span>
-        <span id="char2">u</span>
-        <span id="char3">l</span>
-        <span id="char4">l</span> <span id="char5">S</span>
-        <span id="char6">t</span>
-        <span id="char7">a</span>
-        <span id="char8">c</span>
-        <span id="char9">k</span> <span id="char10">D</span>
-        <span id="char11">e</span>
-        <span id="char12">v</span>
-        <span id="char13">e</span>
-        <span id="char14">l</span>
-        <span id="char15">o</span>
-        <span id="char16">p</span>
-        <span id="char17">e</span>
-        <span id="char18">r</span>
+        <span className="tracking-wide">
+          <span id="char1">F</span>
+          <span id="char2">u</span>
+          <span id="char3">l</span>
+          <span id="char4">l</span> <span id="char5">S</span>
+          <span id="char6">t</span>
+          <span id="char7">a</span>
+          <span id="char8">c</span>
+          <span id="char9">k</span>
+        </span>
+        <br />
+        <span className="max-md:text-4xl">
+          <span id="char10">D</span>
+          <span id="char11">e</span>
+          <span id="char12">v</span>
+          <span id="char13">e</span>
+          <span id="char14">l</span>
+          <span id="char15">o</span>
+          <span id="char16">p</span>
+          <span id="char17">e</span>
+          <span id="char18">r</span>
+        </span>
       </span>
     </h2>
   );

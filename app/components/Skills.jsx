@@ -30,8 +30,8 @@ const Skills = () => {
       color: "#fb503b",
     },
     {
-      value: "teenyicons:nodejs-outlin",
-      name: "Node JS  ",
+      value: "teenyicons:nodejs-outline",
+      name: "Node JS ",
       color: "#68a063",
     },
     {
@@ -57,15 +57,15 @@ const Skills = () => {
     { value: "simple-icons:tauri", name: "Tauri", color: "#FFC337" },
   ];
   return (
-    <div className=" flex flex-col gap-4  ">
+    <div className=" flex flex-col gap-2">
       <span className="font-light flex max-md:flex-wrap items-center gap-4 tracking-wider text-gray-300/70">
-        <h1 className="max-md:text-[1.7rem] text-blue-400">Web Developer - </h1>
+        <h1 className="max-md:text-lg text-blue-400">Web Developer <span className="max-md:hidden">-</span> </h1>
         <div className="flex gap-4">
           {iconCollect.map(({ value, name, color }, index) => (
             <div key={index} className="group relative">
               <p
                 style={{ backgroundColor: `${color}` }}
-                className={`absolute hidden z-10 bg-[${color}] p-2 text-sm text-white rounded-md  group-hover:block top-7 `}
+                className={`absolute hidden z-10 bg-[${color}]  p-2 text-sm text-white rounded-md  group-hover:block top-7 `}
               >
                 {name}
               </p>

@@ -6,7 +6,7 @@ const Navigation = ({ setActive }) => {
   let hoverLink =
     "absolute bg-white ease-in-out duration-150 transition-all group-hover/link:bg-red-500 h-1 w-1/2 group-hover/link:w-full rounded-full";
   return (
-    <ul className="flex gap-x-10 max-md:gap-x-4 ">
+    <ul className="flex gap-x-10 max-md:gap-x-between tracking-wide ">
       <li onClick={() => setActive("skills")} className={navItemClassName}>
         Skills <div className={hoverLink}></div>
       </li>

@@ -8,20 +8,15 @@ export default function Home({ children }) {
   ];
 
   return (
-    <section className="container leading-relaxed max-md:py-20 text-white mx-auto grid grid-cols-2 place-content-center min-h-screen content-center">
-      <div className="col-span-1 max-md:col-span-2  flex flex-col p-10 max-md:p-0 gap-5">
-        <h1 className="text-7xl max-md:text-5xl leading-tight">
+    <section className="container leading-relaxed max-md:py-20 text-[#e0e2db] mx-auto grid grid-cols-2 place-content-center min-h-screen content-center max-md:content-start">
+      <div className="col-span-1 max-md:col-span-2  flex flex-col p-10 max-md:p-0 gap-3">
+        <h1 className="text-7xl max-sm:text-3xl max-md:text-4xl leading-relaxed">
           <span className="text-[crimson]">Crear</span> conlleva esfuerzo y
           dedicación.
         </h1>
-        <p className="font-light text-[#d6d6d6] max-md:text-sm">
-          Soy Miguel Angel Mateo, me considero full stack developer por mis
-          capacidades de extrapolar mis conocimientos tengo 2 años de
-          experiencia e trabajado para la compañia Prixet Tecnology donde
-          participe en e desarrollo de aplicaciones y landing pages. Tengo un
-          objetivo y es comprender tanto la programación que parezca juego de
-          niños. Me gustan los retos y desde que empeze a programar no e parado
-          de ser retado a mejorar cada dia.
+        <p className="font-light text-[#d6d6d6] max-md:text-lg">
+          Soy Miguel Angel Mateo, desarrollador full stack con 2 años de
+          experiencia en aplicaciones y landing pages en Prixet Technology.
         </p>
         <div className="flex gap-4">
           {features.map((stat, index) => (
