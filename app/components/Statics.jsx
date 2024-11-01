@@ -2,9 +2,9 @@ import React from "react";
 
 const Statics = ({ stats, position }) => {
   return (
-    <span className="flex flex-col w-1/2 max-md:w-full">
-      <span className="text-7xl max-md:text-5xl max-sm: text-[crimson] ">{stats}</span>
-      <span className=" break-words max-md:text-xl   text-4xl text-wrap">
+    <span className="flex flex-col w-1/2 max-lg:w-full justify-start">
+      <span className=" max-lg:text-5xl  text-[crimson]">{stats}</span>
+      <span className=" break-words max-md:text-sm  max-lg:text-2xl whitespace-pre-line text-balance">
         {position}
       </span>
     </span>

@@ -43,7 +43,7 @@ const page = () => {
           mis logros.
         </p>
       </div>
-      <div className=" max-md:h-[50vh] max-md:py-5 grid grid-cols-2 max-md:col-span-2 col-span-1 items-stretch  justify-center gap-4">
+      <div className=" max-md:py-5 grid grid-cols-2 max-md:col-span-2 col-span-1 items-stretch  justify-center gap-4">
         {projects.map(({ link, url, id, state }, index) => {
           return (
             <Link

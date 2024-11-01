@@ -56,11 +56,47 @@ const Skills = () => {
     { value: "teenyicons:rust-outline", name: "Rust", color: "#F65008" },
     { value: "simple-icons:tauri", name: "Tauri", color: "#FFC337" },
   ];
+  let sections = [
+    { value: "Web Developer", collect: iconCollect, color: "text-[#61e8e1]" },
+    {
+      value: "Back end Developer",
+      collect: iconBackend,
+      color: "text-[#ED254E]",
+    },
+    { value: "Database", collect: DatabaseIcons, color: "text-[#3D7068]" },
+    { value: "Interest", collect: interest, color: "text-[#E5E059]" },
+  ];
   return (
-    <div className=" flex flex-col gap-2">
-      <span className="font-light flex max-md:flex-wrap items-center gap-4 tracking-wider text-gray-300/70">
-        <h1 className="max-md:text-lg text-blue-400">Web Developer <span className="max-md:hidden">-</span> </h1>
-        <div className="flex gap-4">
+    <div className=" flex flex-col gap-2 w-full">
+      {sections.map((section, index, ) => (
+        <div
+          key={index}
+          className="flex flex-col gap-2 content-center justify-center"
+        >
+          <h1 className={`text-xl font-light tracking-wide   ${section.color}`}>
+            {section.value} 
+          </h1>
+          <div className="flex gap-4 flex-wrap">
+            {section.collect.map((icon, index) => (
+              <Icon
+                key={index}
+                icon={icon.value}
+                className={`text-3xl ${icon.color}`}
+              />
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+/*
+  <span className="font-light flex max-md:flex-wrap items-center gap-4 tracking-wider text-gray-300/70">
+        <h1 className="max-md:text-lg text-blue-400">
+          Web Developer <span className="max-md:hidden">-</span>{" "}
+        </h1>
+        <div className="flex space-x-2">
           {iconCollect.map(({ value, name, color }, index) => (
             <div key={index} className="group relative">
               <p
@@ -80,7 +116,7 @@ const Skills = () => {
         </h1>
         <div className="flex gap-4">
           {iconBackend.map(({ value, name, color }, index) => (
-            <div  key={index} className="group relative">
+            <div key={index} className="group relative">
               <p
                 style={{ backgroundColor: `${color}` }}
                 className={`absolute hidden p-2 z-10 text-white  group-hover:block rounded-md top-6 `}
@@ -103,7 +139,7 @@ const Skills = () => {
               >
                 {name}
               </p>
-              <Icon  icon={value} className="text-white text-2xl" />
+              <Icon icon={value} className="text-white text-2xl" />
             </div>
           ))}
         </div>
@@ -122,13 +158,10 @@ const Skills = () => {
               >
                 {name}
               </p>
-              <Icon  icon={value} className="text-white text-2xl" />
+              <Icon icon={value} className="text-white text-2xl" />
             </div>
           ))}
         </div>
-      </span>
-    </div>
-  );
-};
+      </span> */
 
 export default Skills;

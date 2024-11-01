@@ -69,7 +69,7 @@ const AnimateText = () => {
       className=" md:text-3xl max-md:text-3xl max-md:text-center antialiased text-[#FBFAF8] font-extrabold"
       ref={comp}
     >
-      {" "}
+      Soy{" "}
       <span id="word">
         <span className="tracking-wide">
           <span id="char1">F</span>
