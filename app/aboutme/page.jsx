@@ -8,9 +8,9 @@ export default function Home({ children }) {
   ];
 
   return (
-    <section className="container leading-relaxed max-lg:py-20 text-[#e0e2db] mx-auto grid grid-cols-2 place-content-center min-h-screen content-start max-md:content-start">
-      <div className="col-span-1 max-lg:col-span-2 items flex flex-col p-10 pb-0 max-md:p-0 gap-3">
-        <h1 className="max-sm:text-3xl max-lg:text-5xl text-wrap font-bold  leading-relaxed">
+    <section className="container leading-relaxed max-lg:py-20 text-[#e0e2db] mx-auto grid grid-cols-2 place-content-center items-stretch xl:h-[90vh] min-h-screen content-center  max-lg:content-start">
+      <div className="col-span-1 max-lg:col-span-2 items flex flex-col  pb-0 max-md:p-0 gap-3">
+        <h1 className="max-sm:text-3xl max-lg:text-5xl text-6xl text-wrap font-bold  max-lg:leading-relaxed leading-none">
           <span className="text-[crimson]">Crear</span> conlleva esfuerzo y
           dedicación.
         </h1>
@@ -24,7 +24,7 @@ export default function Home({ children }) {
           ))}
         </div>
       </div>
-      <div className="col-span-1 max-lg:col-span-2 items-center  max-md:py-5 max-md:p-0 flex flex-col p-10 gap-5">
+      <div className="col-span-1 max-lg:col-span-2 self-start mx-auto w-fit max-md:py-5 max-md:p-0 flex flex-col max-lg:p-10 px-10 gap-5">
         <Subrender />
       </div>
     </section>

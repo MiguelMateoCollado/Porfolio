@@ -29,12 +29,12 @@ const page = () => {
     },
   ];
   return (
-    <section className="container leading-relaxed text-white mx-auto grid gap-4 grid-cols-2 max-md:py-20 min-h-screen content-center">
-      <div className=" flex flex-col max-md:col-span-2 col-span-1 gap-4">
+    <section className="container leading-relaxed text-white mx-auto grid gap-4 grid-cols-2 max-md:py-20  min-h-screen content-center">
+      <div className=" flex flex-col max-lg:col-span-2 col-span-1 gap-4">
         <h1 className="text-6xl max-md:text-4xl">
           Mis Proyectos<span className="text-red-500">.</span>
         </h1>
-        <p className="text-base w-2/3 max-md:text-sm max-md:font-light max-md:w-full text-[#d6d6d6] tracking-wide leading-relaxed text-wrap">
+        <p className="text-base w-2/3 max-md:text-sm max-md:font-light max-lg:w-full text-[#d6d6d6] tracking-wide leading-relaxed text-wrap">
           A lo largo del tiempo, e desarrollado diversos proyectos tanto por
           parte de las empresas donde e trabajado como retos personales, los
           principales objetivos de estos proyectos es aportar algo y a la vez
@@ -43,7 +43,7 @@ const page = () => {
           mis logros.
         </p>
       </div>
-      <div className=" max-md:py-5 grid grid-cols-2 max-md:col-span-2 col-span-1 items-stretch  justify-center gap-4">
+      <div className=" max-md:py-5 grid grid-cols-2 max-lg:col-span-2 col-span-1 items-stretch  justify-center gap-4">
         {projects.map(({ link, url, id, state }, index) => {
           return (
             <Link

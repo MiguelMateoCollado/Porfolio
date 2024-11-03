@@ -94,18 +94,18 @@ honed my Laravel database design skills.`,
     projects.find((project) => project.id == params.id)
   );
   return (
-    <div className="container leading-relaxed gap-4 text-white mx-auto grid grid-cols-2 max-md:py-20 min-h-screen content-center">
+    <div className="container leading-relaxed gap-4 text-white mx-auto grid grid-cols-2 max-md:py-20 xl:h-[90vh] content-center">
       <div className="col-span-1 max-md:col-span-2 content-center relative rounded-xl">
         <Image
           src={project.link}
           width={500}
-          height={500}
+          height={600}
           alt="project image"
         />
       </div>
       <div className="col-span-1 p-4 gap-3 max-md:col-span-2 flex flex-col gap-y-7">
         <span>
-          <h1 className="text-3xl font-light text-[crimson]">
+          <h1 className="text-3xl max-lg:text-xl tracking-wide ">
             {project.title}
           </h1>
           <h1 className="text-xl font-light text-gray-500">

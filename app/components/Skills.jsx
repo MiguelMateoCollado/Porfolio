@@ -57,13 +57,13 @@ const Skills = () => {
     { value: "simple-icons:tauri", name: "Tauri", color: "#FFC337" },
   ];
   let sections = [
-    { value: "Web Developer", collect: iconCollect, color: "text-[#61e8e1]" },
+    { value: "Front-end Technologies", collect: iconCollect, color: "text-[#61e8e1]" },
     {
-      value: "Back end Developer",
+      value: "Back-end Technologies",
       collect: iconBackend,
-      color: "text-[#ED254E]",
+      color: "text-[#f9eae1]",
     },
-    { value: "Database", collect: DatabaseIcons, color: "text-[#3D7068]" },
+    { value: "Database", collect: DatabaseIcons, color: "text-[#b3efb2]" },
     { value: "Interest", collect: interest, color: "text-[#E5E059]" },
   ];
   return (
@@ -71,9 +71,9 @@ const Skills = () => {
       {sections.map((section, index, ) => (
         <div
           key={index}
-          className="flex flex-col gap-2 content-center justify-center"
+          className="flex flex-col gap-4 content-center justify-center"
         >
-          <h1 className={`text-xl font-light tracking-wide   ${section.color}`}>
+          <h1 className={`text-xl  tracking-wide   ${section.color}`}>
             {section.value} 
           </h1>
           <div className="flex gap-4 flex-wrap">

@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={lexend.className}>
-        <main className=" min-h-screen  from-[#272121] bg-gradient-to-tr to-[#443737] ">
+        <main className=" min-h-screen  from-[#272121] bg-gradient-to-tr to-[#443737]  ">
           <Navbar />
           <Sidebar />
           <Downbar />

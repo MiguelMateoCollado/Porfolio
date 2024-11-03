@@ -56,7 +56,7 @@ const AnimateText = () => {
         ],
         {
           opacity: 1,
-          color: "crimson",
+          color: "#d33e43",
           stagger: 0.075,
         }
       );
@@ -66,7 +66,7 @@ const AnimateText = () => {
   });
   return (
     <h2
-      className=" md:text-3xl max-md:text-3xl max-md:text-center antialiased text-[#FBFAF8] font-extrabold"
+      className=" md:text-3xl max-md:text-3xl max-md:text-center antialiased text-[#FBFAF8] font-extrabold text-balance"
       ref={comp}
     >
       Soy{" "}
@@ -81,7 +81,7 @@ const AnimateText = () => {
           <span id="char8">c</span>
           <span id="char9">k</span>
         </span>
-        <br />
+       {" "}
         <span className="max-md:text-4xl">
           <span id="char10">D</span>
           <span id="char11">e</span>
