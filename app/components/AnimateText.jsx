@@ -56,7 +56,7 @@ const AnimateText = () => {
         ],
         {
           opacity: 1,
-          color: "#d33e43",
+          color: "#D24545",
           stagger: 0.075,
         }
       );

@@ -57,14 +57,14 @@ const Skills = () => {
     { value: "simple-icons:tauri", name: "Tauri", color: "#FFC337" },
   ];
   let sections = [
-    { value: "Front-end Technologies", collect: iconCollect, color: "text-[#61e8e1]" },
+    { value: "Tecnologias Front end", collect: iconCollect, color: "text-[#61e8e1]" },
     {
-      value: "Back-end Technologies",
+      value: "Tecnologias Back end",
       collect: iconBackend,
       color: "text-[#f9eae1]",
     },
-    { value: "Database", collect: DatabaseIcons, color: "text-[#b3efb2]" },
-    { value: "Interest", collect: interest, color: "text-[#E5E059]" },
+    { value: "Tecnologias de base de datos", collect: DatabaseIcons, color: "text-[#b3efb2]" },
+    { value: "Intereses", collect: interest, color: "text-[#E5E059]" },
   ];
   return (
     <div className=" flex flex-col gap-2 w-full">
@@ -91,77 +91,6 @@ const Skills = () => {
   );
 };
 
-/*
-  <span className="font-light flex max-md:flex-wrap items-center gap-4 tracking-wider text-gray-300/70">
-        <h1 className="max-md:text-lg text-blue-400">
-          Web Developer <span className="max-md:hidden">-</span>{" "}
-        </h1>
-        <div className="flex space-x-2">
-          {iconCollect.map(({ value, name, color }, index) => (
-            <div key={index} className="group relative">
-              <p
-                style={{ backgroundColor: `${color}` }}
-                className={`absolute hidden z-10 bg-[${color}]  p-2 text-sm text-white rounded-md  group-hover:block top-7 `}
-              >
-                {name}
-              </p>
-              <Icon icon={value} className={`text-white text-2xl`} />
-            </div>
-          ))}
-        </div>
-      </span>
-      <span className="font-light flex max-md:flex-wrap items-center gap-4 tracking-wider text-gray-300/70">
-        <h1 className="max-md:text-[1.7rem] text-red-400">
-          Back end Developer -{" "}
-        </h1>
-        <div className="flex gap-4">
-          {iconBackend.map(({ value, name, color }, index) => (
-            <div key={index} className="group relative">
-              <p
-                style={{ backgroundColor: `${color}` }}
-                className={`absolute hidden p-2 z-10 text-white  group-hover:block rounded-md top-6 `}
-              >
-                {name}
-              </p>
-              <Icon icon={value} className="text-white text-2xl" />
-            </div>
-          ))}
-        </div>
-      </span>
-      <span className="font-light flex max-md:flex-wrap items-center gap-4 tracking-wider text-gray-300/70">
-        <h1 className="max-md:text-[1.7rem] text-green-400">Database - </h1>
-        <div className="flex gap-4">
-          {DatabaseIcons.map(({ value, name, color }, index) => (
-            <div key={index} className="group relative">
-              <p
-                style={{ backgroundColor: `${color}` }}
-                className={`absolute hidden p-2 z-10 text-white  group-hover:block rounded-md top-6 `}
-              >
-                {name}
-              </p>
-              <Icon icon={value} className="text-white text-2xl" />
-            </div>
-          ))}
-        </div>
-      </span>
-      <span className="font-light flex items-center gap-4  max-md:flex-col max-md:items-start tracking-wider text-gray-300/70">
-        <h1 className="max-md:text-[1.7rem] text-orange-400">
-          {" "}
-          Interestings -{" "}
-        </h1>
-        <div className="flex gap-4">
-          {interest.map(({ value, name, color }, index) => (
-            <div key={index} className="group relative">
-              <p
-                style={{ backgroundColor: `${color}` }}
-                className={`absolute hidden p-2 z-10 text-white  group-hover:block rounded-md top-6 `}
-              >
-                {name}
-              </p>
-              <Icon icon={value} className="text-white text-2xl" />
-            </div>
-          ))}
-        </div>
-      </span> */
+
 
 export default Skills;

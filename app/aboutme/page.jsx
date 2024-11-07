@@ -11,7 +11,7 @@ export default function Home({ children }) {
     <section className="container leading-relaxed max-lg:py-20 text-[#e0e2db] mx-auto  grid grid-cols-2 place-content-center items-stretch xl:h-[90vh] min-h-screen content-center  max-lg:content-start">
       <div className="col-span-1 max-lg:col-span-2 place-content-center flex flex-col  pb-0 max-md:p-0 gap-3">
         <h1 className="max-sm:text-3xl max-lg:text-5xl text-4xl text-wrap font-bold  max-lg:leading-relaxed leading-none">
-          <span className="text-[crimson]">Crear</span> conlleva esfuerzo y
+          <span className="text-main-color">Crear</span> conlleva esfuerzo y
           dedicación.
         </h1>
         <p className="font-light text-[#d6d6d6] max-md:text-lg text-xl text-balance">
@@ -24,7 +24,7 @@ export default function Home({ children }) {
           ))}
         </div>
       </div>
-      <div className="col-span-1 max-lg:col-span-2 place-content-center  mx-auto w-fit max-md:py-5 max-md:p-0 flex flex-col max-lg:p-10 px-10 gap-5">
+      <div className="col-span-1 max-lg:col-span-2 place-content-center  mx-auto  max-md:py-5 max-md:p-0 flex flex-col max-lg:py-10  gap-5 w-full">
         <Subrender />
       </div>
     </section>

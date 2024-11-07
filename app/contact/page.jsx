@@ -8,7 +8,7 @@ const page = () => {
     <div className="container leading-relaxed text-white mx-auto flex min-h-screen max-md:py-20 items-center">
       <div className="grid grid-cols-2 items-center gap-16 p-10 max-md:p-0 rounded-lg shadow-xl mx-auto max-w-4xl  ">
         <div className="max-md:col-span-2 col-span-1">
-          <h1 className="text-3xl font-extrabold text-red-500">Let s talk!</h1>
+          <h1 className="text-3xl font-extrabold text-main-color">Let s talk!</h1>
           <p className="text-md text-white mt-4">
             ¿Tiene alguna gran idea o marca que desarrollar y necesita ayuda?
             Póngase en contacto con nosotros nos encantará conocer tu proyecto y
@@ -63,7 +63,7 @@ const page = () => {
           ></textarea>
           <button
             type="button"
-            className="text-white bg-red-500 hover:bg-red-600 tracking-wide border-2 border-red-400 rounded-md text-sm px-4 py-3 w-full !mt-6"
+            className="text-white bg-red-500 hover:bg-main-color tracking-wide border-2 border-red-400 rounded-md text-sm px-4 py-3 w-full !mt-6"
           >
             Send
           </button>
