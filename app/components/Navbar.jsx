@@ -4,7 +4,7 @@ const Navbar = () => {
   let iconClassname =
     "text-[#FBFAF8] text-3xl  hover:cursor-pointer hover:text-[#272121] ease-in-out duration-150";
   return (
-    <nav className="container py-5 z-10 mx-auto left-0 right-0  fixed top-0  max-lg:bg-red-500 w-full grid grid-cols-2">
+    <nav className="container py-5 z-10 mx-auto left-0 right-0  fixed top-0  max-lg:bg-main-color w-full grid grid-cols-2">
       <div className="col-span-1">
         <h1 className="text-2xl text-[#FBFAF8]">Mmateo.</h1>
       </div>

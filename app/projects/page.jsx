@@ -17,9 +17,9 @@ const page = () => {
     },
     {
       id: 3,
-      link: "./imgs/loan.jpg",
-      url: "https://condovisita.com/",
-      state: "building",
+      link: "./imgs/noah.png",
+      url: "https://restaurantenoah.com.do/",
+      state: "complete",
     },
     {
       id: 4,
@@ -50,7 +50,7 @@ const page = () => {
               key={index}
               href={`/project/${id}`}
               style={{ backgroundImage: `url(${link})` }}
-              className={`col-span-1 max-md:col-span-2 group/project h-[25vh] cursor-pointer bg-cover bg-center inner-shadow rounded-lg hover:scale-105 transition-all duration-300 hover:rotate-1 bg-red-500`}
+              className={`col-span-1 max-md:col-span-2 group/project h-[25vh] cursor-pointer bg-cover bg-center inner-shadow rounded-lg hover:scale-105 transition-all duration-300 hover:rotate-1 bg-black`}
             >
               {state === "complete" ? (
                 <div className="bg-none text-center items-center justify-center group-hover/project:bg-gray-800/50  text-xl transition-all duration-300 rounded-lg flex h-full ">

@@ -3,8 +3,14 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
-import Link from "next/link";
-import ExperienceTab from "@/app/components/ExperienceTab";
+import { AnimatedButton } from "@/app/components/AnimatedButton";
+import { AcordionTab } from "@/app/components/AcordionTab";
+import {
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
 const page = ({ params }) => {
   let projects = [
     {
@@ -48,11 +54,11 @@ honed my Laravel database design skills.`,
     },
     {
       id: 3,
-      link: "/imgs/loan.jpg",
-      url: "https://condovisita.com/",
-      title: "Loan System",
-      time: "Present",
-      tabname: "Freelance Project",
+      link: "/imgs/noah.png",
+      url: "https://restaurantenoah.com.do/",
+      title: "Restaurante Noah",
+      time: "2024",
+      tabname: "Prixet Technology",
       description: `
       I gained extensive UI design experience while completing a visitor management project. I implemented the design using CSS and
 TailwindCSS and participated in backend/frontend development using React JS and Laravel. I also developed form constraints and
@@ -70,7 +76,7 @@ honed my Laravel database design skills.`,
     {
       id: 4,
       link: "/imgs/aleja.jpg",
-      url: "https://condovisita.com/",
+      url: "https://es.alejaaccesorios.com/",
       title: "Aleja Accesorios",
       time: "Present",
       tabname: "Prixet Technology",
@@ -90,8 +96,8 @@ honed my Laravel database design skills.`,
     projects.find((project) => project.id == params.id)
   );
   return (
-    <div className="container leading-relaxed gap-4 text-white mx-auto grid grid-cols-2 max-md:py-20 xl:h-[90vh] content-center">
-      <div className="col-span-1 max-md:col-span-2 content-center relative rounded-xl">
+    <div className="container leading-relaxed gap-4 text-white mx-auto max-lg:max-w-md grid grid-cols-2 max-md:py-20 min-h-screen lg:h-[90vh] content-center">
+      <div className="col-span-1 max-lg:col-span-2 justify-items-center content-center relative rounded-xl">
         <Image
           src={project.link}
           width={500}
@@ -99,7 +105,7 @@ honed my Laravel database design skills.`,
           alt="project image"
         />
       </div>
-      <div className="col-span-1 p-4 gap-3 max-md:col-span-2 flex flex-col gap-y-7">
+      <div className="col-span-1 p-4 gap-3 max-lg:col-span-2 max-lg:p-0 flex flex-col gap-y-2">
         <span>
           <h1 className="text-3xl max-lg:text-xl tracking-wide text-main-color">
             {project.title}
@@ -108,30 +114,25 @@ honed my Laravel database design skills.`,
             {project.position}
           </h1>
         </span>
-        <ExperienceTab
-          description={project.description}
-          tabname={project.tabname}
-          defaultSize={"h-24"}
-          time={project.time}
-        />
+        <AcordionTab>
+          <AccordionItem value={project.id}>
+            <AccordionTrigger className="text-lg max-md:text-[0.9rem] flex-wrap font-light tracking-wide flex items-center gap-1  w-fit hover:text-red-400 transition-all duration-150 cursor-pointer text-[#D24545]">
+              {project.tabname} - {project.time}
+            </AccordionTrigger>
+            <AccordionContent className="flex flex-col gap-2 whitespace-pre-wrap tracking-wide truncate text-pretty transition-all duration-500 ease-in-out leading-relaxed">
+              {project.description}
+            </AccordionContent>
+          </AccordionItem>
+        </AcordionTab>
         {/*<p className="font-light leading-relaxed">{project.description}</p> */}
         <h2 className="font-light">Stack:</h2>
-        <span className="flex flex-row gap-4">
+        <span className="flex flex-row gap-x-4 px-0 p-3">
           {project.skills.map((value, index) => (
             <Icon key={index} icon={value} className="text-white text-3xl" />
           ))}
         </span>
         <span>
-          <Link
-            className="bg-white relative  group/project text-main-color p-3 "
-            href={project.url}
-          >
-            Link al proyecto.
-            <div className="absolute group-hover/project:w-full group-hover/project:bg-main-color transition-all duration-300  w-0 h-1 top-0 ease-in-out  bg-white"></div>
-            <div className="absolute group-hover/project:h-full group-hover/project:bg-main-color transition-all duration-300 ease-in-out w-1 h-0 rigth-0 top-0  bg-white"></div>
-            <div className="absolute group-hover/project:h-full group-hover/project:bg-main-color transition-all duration-300 ease-in-out w-1 h-0 -right-0 top-0  bg-white"></div>
-            <div className="absolute group-hover/project:w-full group-hover/project:bg-main-color transition-all duration-300 ease-in-out  w-0 h-1 bottom-0  bg-white"></div>
-          </Link>
+          <AnimatedButton link={project.url}> Ver Proyecto</AnimatedButton>
         </span>
       </div>
     </div>
