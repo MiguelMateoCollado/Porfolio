@@ -15,7 +15,7 @@ const page = () => {
             ofrecerte ayuda.
           </p>
           <div className="mt-12 max-md:mt-0 ">
-            <h2 className="text-gray-800 text-base font-bold">Email</h2>
+            <h2 className="text-white text-base font-bold">Email</h2>
             <ul className="mt-4">
               <li className="flex flex-wrap items-center">
                 <Icon icon="ion:email" className="text-4xl " />
@@ -30,7 +30,7 @@ const page = () => {
           </div>
 
           <div className="mt-12 max-md:mt-0">
-            <h2 className="text-gray-800 text-base font-bold">Socials</h2>
+            <h2 className="text-white text-base font-bold">Socials</h2>
 
             <ul className="flex mt-4 space-x-4">
               <li className="rounded-full flex items-center justify-center shrink-0">

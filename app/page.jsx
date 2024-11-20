@@ -28,7 +28,7 @@ export default function Home() {
           Me he nutrido del vasto e inagotable conocimiento de Internet para
           forjar mi propio destino.
         </p>
-        <div className=" gap-3 max-md:col-span-1 flex flex-col gap-y-7 max-lg:mb-14">
+        <div className=" gap-3 max-md:col-span-2 max-lg:mx-auto flex flex-col gap-y-7 max-lg:mb-20">
           <span className="w-fit">
             <AnimatedButton link={"./cv.pdf"}>Descargar CV</AnimatedButton>
           </span>
