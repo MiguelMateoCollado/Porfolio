@@ -25,11 +25,12 @@ const page = ({ params }) => {
       🌟 Crear un CRUD para registrar, buscar, filtrar y mostrar información de videojuegos.
       🌟 Crear una funcionalidad para mostrar más información sobre los videojuegos.
       🌟 Desarrollar todo el front-end del proyecto.
-
 Descripción:
-Este proyecto nació con el propósito de plasmar todo lo que aprendí durante mi curso. Con solo dos semanas de plazo, me sumergí en el desarrollo de un catálogo de videojuegos utilizando React, Express, CSS y la API de rawg.io.
-En él, los usuarios pueden registrarse, buscar, filtrar y descubrir información detallada sobre cada juego. Fue mi proyecto final en el Bootcamp de Henry, y más que un simple examen, significó mi primer gran desafío como programador. A través de este proceso, aprendí lo valiosa que es la práctica constante y cómo, poco a poco, empecé a sentirme más seguro en este camino que había elegido. Este proyecto me marcó, no solo porque fue el primero, sino porque me demostró que, con esfuerzo y dedicación, podía lograr cualquier cosa.
-Con el paso del tiempo, seguí mejorándolo, aplicando las nuevas tecnologías que he ido aprendiendo a lo largo de mi carrera. Descubrí que, cuando tienes las habilidades y la pasión por lo que haces, el único límite para crear es tu propia imaginación.`,
+I created this project to summarize my learning during the course. In just one week, I developed a video game catalog using React, Express, CSS, and the rawg.io API.
+
+Users can register, search, filter, and view game details. This final project at Henry's Bootcamp was my first major challenge, teaching me the value of practice and boosting my confidence.
+
+It showed me that with hard work, I can achieve my goals. I’ve continued improving it by exploring new technologies, realizing that my only limit is my imagination.`,
       tabname: "Proyecto Final Henry Bootcamp",
       skills: [
         "devicon:react",
@@ -46,11 +47,17 @@ Con el paso del tiempo, seguí mejorándolo, aplicando las nuevas tecnologías q
       title: "Condovisitas",
       time: "2022",
       tabname: "Prixet Tecnology",
-      description: `I gained extensive UI design experience while completing a visitor management project. I implemented the design using CSS and
-TailwindCSS and participated in backend/frontend development using React JS and Laravel. I also developed form constraints and
-honed my Laravel database design skills.`,
+      description: `Condovisitas es una app de visitas a residenciales y llevar un registro de las visitas de los inquilinos la idea es llevar un registro constantes de las visitas de las personas y agilizar el proceso.
+      
+Me encarge del frontend y el backend de la app. Desarrolle la app con React y Laravel. En el frontend Utilice Tailwind y en el backend use PHP y MySQL. Desarrolle todas las funcionaldades del front y maneje los formularios utilizando PHP y laravel.`,
 
-      skills: ["devicon:react", "logos:laravel", "devicon:tailwindcss"],
+      skills: [
+        "devicon:react",
+        "logos:laravel",
+        "devicon:tailwindcss",
+        "vscode-icons:file-type-php",
+        "vscode-icons:file-type-mysql",
+      ],
     },
     {
       id: 3,
@@ -59,30 +66,19 @@ honed my Laravel database design skills.`,
       title: "Restaurante Noah",
       time: "2024",
       tabname: "Prixet Technology",
-      description: `
-      I gained extensive UI design experience while completing a visitor management project. I implemented the design using CSS and
-TailwindCSS and participated in backend/frontend development using React JS and Laravel. I also developed form constraints and
-honed my Laravel database design skills.`,
+      description: `Fui encargado de rediseñar la UI del restaurante Noah. Utilice Wordpress, Realice un rediseño de la UI de la app.`,
 
-      skills: [
-        "devicon:nextjs",
-        "logos:jotai",
-        "devicon:tauri",
-        "devicon:tailwindcss",
-        "devicon:mongodb",
-        "vscode-icons:file-type-prisma",
-      ],
+      skills: ["devicon:html5", "devicon:css3", "simple-icons:wordpress"],
     },
     {
       id: 4,
       link: "/imgs/aleja.jpg",
       url: "https://es.alejaaccesorios.com/",
       title: "Aleja Accesorios",
-      time: "Present",
+      time: "2024",
       tabname: "Prixet Technology",
-      description: `I gained extensive UI design experience while completing a visitor management project. I implemented the design using CSS and
-TailwindCSS and participated in backend/frontend development using React JS and Laravel. I also developed form constraints and
-honed my Laravel database design skills.`,
+      description: `Aleja Accesorios es una tienda online de accesorios. la idea principal era darle un aire frezco a su pagina anterior cambiando la UI y optimizando el rendimiento de la pagina.
+      desarrolle un e-commerce con Wordpress. Utilice Wordpress, implementando la UI y pagos con Paypal registro y un metodo de redireccionamiento con Geolite2., desplegue la aplicación utilizando nginx`,
 
       skills: [
         "mdi:wordpress",
@@ -119,12 +115,12 @@ honed my Laravel database design skills.`,
             <AccordionTrigger className="text-lg max-md:text-[0.9rem] flex-wrap font-light tracking-wide flex items-center gap-1  w-fit hover:text-red-400 transition-all duration-150 cursor-pointer text-[#D24545]">
               {project.tabname} - {project.time}
             </AccordionTrigger>
-            <AccordionContent className="flex flex-col gap-2 whitespace-pre-wrap tracking-wide truncate text-pretty transition-all duration-500 ease-in-out leading-relaxed">
+            <AccordionContent className="flex flex-col gap-2 whitespace-pre-wrap tracking-wide max-xl:text-xs truncate text-pretty transition-all duration-500 ease-in-out leading-relaxed">
               {project.description}
             </AccordionContent>
           </AccordionItem>
         </AcordionTab>
-        {/*<p className="font-light leading-relaxed">{project.description}</p> */}
+
         <h2 className="font-light">Stack:</h2>
         <span className="flex flex-row gap-x-4 px-0 p-3">
           {project.skills.map((value, index) => (

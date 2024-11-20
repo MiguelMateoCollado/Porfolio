@@ -5,7 +5,7 @@ import Subrender from "./components/Subrender";
 import Image from "next/image";
 export default function Home() {
   return (
-    <section className="container min-h-screen leading-relaxed text-white mx-auto grid grid-cols-2 max-md:py-14 max-md:gap-y-2 max-lg:py-12  content-center ">
+    <section className="container min-h-screen leading-relaxed text-white mx-auto grid grid-cols-2 max-md:py-14 max-md:gap-y-2 max-lg:py-12  ">
       <div className="col-span-1 max-lg:col-span-2 content-center overflow-hidden justify-center flex items-center">
         <Image
           width={375}
@@ -28,7 +28,7 @@ export default function Home() {
           Me he nutrido del vasto e inagotable conocimiento de Internet para
           forjar mi propio destino.
         </p>
-        <div className="  gap-3 max-md:col-span-2 mx-auto flex flex-col gap-y-7 max-lg:mb-14">
+        <div className=" gap-3 max-md:col-span-1 flex flex-col gap-y-7 max-lg:mb-14">
           <span className="w-fit">
             <AnimatedButton link={"./cv.pdf"}>Descargar CV</AnimatedButton>
           </span>

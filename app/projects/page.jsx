@@ -1,29 +1,30 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
+import Image from "next/image";
 const page = () => {
   let projects = [
     {
       id: 1,
-      link: "./imgs/videogames.jpg",
+      link: "/imgs/videogames.jpg",
       url: "https://videogames.mmateo.com/",
       state: "complete",
     },
     {
       id: 2,
-      link: "./imgs/condovisitas.jpg",
+      link: "/imgs/condovisitas.jpg",
       url: "https://condovisita.com/",
       state: "complete",
     },
     {
       id: 3,
-      link: "./imgs/noah.png",
+      link: "/imgs/noah.png",
       url: "https://restaurantenoah.com.do/",
       state: "complete",
     },
     {
       id: 4,
-      link: "./imgs/aleja.jpg",
+      link: "/imgs/aleja.jpg",
       url: "https://condovisita.com/",
       state: "complete",
     },
@@ -49,11 +50,19 @@ const page = () => {
             <Link
               key={index}
               href={`/project/${id}`}
-              style={{ backgroundImage: `url(${link})` }}
-              className={`col-span-1 max-md:col-span-2 group/project h-[25vh] cursor-pointer bg-cover bg-center inner-shadow rounded-lg hover:scale-105 transition-all duration-300 hover:rotate-1 bg-black`}
+              className={`col-span-1 max-md:col-span-2  group/project h-[25vh] cursor-pointer bg-cover bg-center inner-shadow rounded-lg hover:scale-105 transition-all duration-300 hover:rotate-1 bg-black relative`}
             >
+             
+              <Image
+                width={375}
+                maxWidth={500}
+                height={500}
+                src={link}
+                className="absolute w-full h-full object-cover z-0 rounded-lg"
+                alt="main photo"
+              />
               {state === "complete" ? (
-                <div className="bg-none text-center items-center justify-center group-hover/project:bg-gray-800/50  text-xl transition-all duration-300 rounded-lg flex h-full ">
+                <div className="bg-none text-center items-center justify-center z-30 absolute w-full group-hover/project:bg-gray-800/50 text-xl transition-all duration-300 rounded-lg flex h-full ">
                   <span className="flex relative items-center gap-2 group-hover/project:bg-white p-2 pl-0  group-hover/project:text-main-color  tracking-wider ">
                     <span className="flex pl-2 items-center text-white/0 group-hover/project:text-main-color">
                       Live Project{" "}
