@@ -1,11 +1,12 @@
 import { useOpenHook } from "../hooks/useOpenHook";
 import { AcordionTab } from "./AcordionTab";
-
 import {
+  Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+
 const Credentials = () => {
   const { openIndex, setOpenIndex, handleToggle } = useOpenHook();
   let experience = [
@@ -66,20 +67,18 @@ Aplicaciones desarrolladas que:
     },
   ];
   return (
-    <div>
+    <Accordion type="single" collapsable>
       {experience.map((exp, index) => (
-        <AcordionTab key={index}>
-          <AccordionItem value={exp.id}>
-            <AccordionTrigger className="text-lg max-md:text-[0.9rem] flex-wrap font-light tracking-wide flex items-center gap-1  w-fit hover:text-red-400 transition-all duration-150 cursor-pointer text-[#D24545]">
-              {exp.experience} - {exp.time}
-            </AccordionTrigger>
-            <AccordionContent className="flex flex-col gap-2 whitespace-pre-wrap tracking-wide truncate text-pretty transition-all duration-500 ease-in-out leading-relaxed">
-              {exp.description}
-            </AccordionContent>
-          </AccordionItem>
-        </AcordionTab>
+        <AccordionItem key={index} value={exp.id}>
+          <AccordionTrigger className="text-lg max-md:text-[0.9rem] flex-wrap font-light tracking-wide flex items-center gap-1  w-fit hover:text-red-400 transition-all duration-150 cursor-pointer text-[#D24545]">
+            {exp.experience} - {exp.time}
+          </AccordionTrigger>
+          <AccordionContent className="flex flex-col gap-2 whitespace-pre-wrap tracking-wide truncate text-pretty transition-all duration-500 ease-in-out leading-relaxed">
+            {exp.description}
+          </AccordionContent>
+        </AccordionItem>
       ))}
-    </div>
+    </Accordion>
   );
 };
 

@@ -1,6 +1,5 @@
 import Statics from "../components/Statics";
 import Subrender from "../components/Subrender";
-
 export default function Home({ children }) {
   let features = [
     { position: `AÑOS DE \nEXPERIENCIA`    , stats: "2+" },
